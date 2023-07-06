@@ -1,21 +1,18 @@
-//Write a program to make such a pattern as a pyramid with an asterisk.
+//Write a program to make such a pattern as a pyramid with an asterisk.void main(){
+//    *
+//   * *
+//  * * *
+// * * * *
 main() {
-  for (var a = 0; a < 4; a++) {
-    var stars = "";
-    for (var b = 0; b <= a; b++) {
-      stars += ' * ';
+  for (int i = 0; i < 4; i++) {
+    //for row
+    var stars = '';
+    for (int j = (4 - i); j > 1; j--) {
+      stars += ' ';
+    }
+    for (int j = 0; j <= i; j++) {
+      stars += '* ';
     }
     print(stars);
   }
 }
-
-// void main() {
-//   for (int i = 0; i < 7; i++) {
-//     var stars = '';
-
-//     for (int j = 0; j <= i; j++) {
-//       stars += '* ';
-//     }
-//     print(stars);
-//   }
-// }

@@ -8,10 +8,10 @@
 
 main() {
   for (var a = 0; a < 5; a++) {
-    var stars = "*";
+    var stars = "";
 
     for (var b = 0; b < a; b++) {
-      stars += '';
+      stars;
     }
     print(stars);
   }
