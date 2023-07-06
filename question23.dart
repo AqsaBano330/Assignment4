@@ -9,8 +9,9 @@
 // {'name': 'Emma', 'marks': [95, 92, 88], 'section': 'B', 'rollNumber': 102},
 // {'name': 'Ryan', 'marks': [70, 65, 75], 'section': 'A', 'rollNumber': 103},
 // ];
-main() {
-  List<Map<dynamic, dynamic>> studentDetails = [
+
+void main() {
+  List<Map<String, dynamic>> studentDetails = [
     {
       'name': 'John',
       'marks': [80, 75, 90],
@@ -31,5 +32,31 @@ main() {
     },
   ];
 
-  print(studentDetails[0]['name']['marks'[0]]);
+  for (var student in studentDetails) {
+    String name = student['name'];
+    List<int> marks = student['marks'];
+    double average = calculateAverage(marks);
+    String grade = calculateGrade(average);
+
+    print('Name: $name, Grade: $grade');
+  }
+}
+
+double calculateAverage(List<int> marks) {
+  int totalMarks = marks.reduce((a, b) => a + b);
+  return totalMarks / marks.length;
+}
+
+String calculateGrade(double average) {
+  if (average >= 90) {
+    return 'A';
+  } else if (average >= 80) {
+    return 'B';
+  } else if (average >= 70) {
+    return 'C';
+  } else if (average >= 60) {
+    return 'D';
+  } else {
+    return 'F';
+  }
 }

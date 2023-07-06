@@ -4,17 +4,23 @@
 //  4 5 6
 // 7 8 9 10
 
-main() {
-  int num = 0;
-  for (int i = 0; i < 4; i++) {
-    //for row
-    var stars = '';
-    for (int j = (4 - i); j > 1; j--) {
-      stars += ' ';
+void main() {
+  final int rows = 4; // Number of rows in the pyramid
+
+  int currentValue = 1;
+  int rowSpaces = rows - 1;
+
+  for (int i = 1; i <= 4; i++) {
+    for (int j = 1; j <= rowSpaces; j++) {
+      print(' ');
     }
-    for (int j = 0; j <= i; j++) {
-      num++;
+
+    for (int k = 1; k <= i; k++) {
+      print(currentValue.toString() + ' ');
+      currentValue++;
     }
-    print(num);
+
+    print('\n');
+    rowSpaces--;
   }
 }
