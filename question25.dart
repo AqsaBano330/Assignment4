@@ -4,33 +4,36 @@
 // Input: [4, 7, 10, 13, 16, 19, 22, 25, 28, 31]
 // Output: [7, 13, 19, 31]
 
-import 'dart:io';
-import 'dart:math';
-
-main() {
-  List integer = [];
-
-  for (var a = 0; a < 10; a++) {
-    var input = int.parse(stdin.readLineSync()!);
-    integer.add(input);
+bool isPrime(int number) {
+  if (number < 2) {
+    return false;
   }
-  print(integer);
 
-  // bool isPrime = true;
-
-  {
-    for (var a = 2; a < integer.length; a++) {
-      if (integer[a] % a == 0) {
-      } else if (integer[a] == 1) {
-      } else {
-        print(integer[a]);
-      }
+  for (int i = 2; i <= number / 2; i++) {
+    if (number % i == 0) {
+      return false;
     }
-
-    // if (isPrime == true) {
-    //   print("This is prime number");
-    // } else if (isPrime == false) {
-    //   print("This is not prime number ");
-    // }
   }
+
+  return true;
+}
+
+List<int> getPrimeNumbers(List<int> numbers) {
+  List<int> primeNumbers = [];
+
+  for (int number in numbers) {
+    if (isPrime(number)) {
+      primeNumbers.add(number);
+    }
+  }
+
+  return primeNumbers;
+}
+
+void main() {
+  List<int> input = [4, 7, 10, 13, 16, 19, 22, 25, 28, 31];
+
+  List<int> output = getPrimeNumbers(input);
+
+  print(output); // Output: [7, 13, 19, 31]
 }

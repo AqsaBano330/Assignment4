@@ -7,7 +7,7 @@
 // ****
 
 main() {
-  for (var a = 5; a > 0; a--) {
+  for (var a = 1; a < 5; a++) {
     var stars = " ";
 
     for (var b = 0; b < a; b++) {
