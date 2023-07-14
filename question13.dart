@@ -6,14 +6,15 @@
 // 333
 // 4444
 
+import 'dart:io';
+
 void main() {
-  for (int i = 1; i <= 4; i++) {
-    // Repeat the current number i times
-    String row = '';
-    for (int j = 0; j < i; j++) {
-      row += i.toString();
+  var a = 1;
+  for (var i = 1; i < 5; i++) {
+    for (var j = 1; j <= i; j++) {
+      stdout.write(i);
     }
 
-    print(row);
+    print(" ");
   }
 }

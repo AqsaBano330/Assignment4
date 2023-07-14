@@ -6,13 +6,14 @@
 // ***
 // ****
 
-main() {
-  for (var a = 1; a < 5; a++) {
-    var stars = " ";
+import 'dart:io';
 
-    for (var b = 0; b < a; b++) {
-      stars += '* ';
+void main() {
+  for (var i = 1; i < 5; i++) {
+    for (var j = 1; j <= i; j++) {
+      stdout.write("*");
     }
-    print(stars);
+
+    print(" ");
   }
 }

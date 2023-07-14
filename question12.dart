@@ -5,14 +5,15 @@
 // 12
 // 123
 // 1234
+import 'dart:io';
 
-main() {
-  for (var a = 0; a < 5; a++) {
-    var stars = "";
-
-    for (var b = 0; b < a; b++) {
-      stars;
+void main() {
+  var a = 1;
+  for (var i = 1; i < 5; i++) {
+    for (var j = 1; j <= i; j++) {
+      stdout.write(j);
     }
-    print(stars);
+
+    print(" ");
   }
 }
