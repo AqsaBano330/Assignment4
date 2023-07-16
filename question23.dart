@@ -42,10 +42,10 @@ void main() {
   }
 }
 
-double calculateAverage(List<int> marks) {
-  int totalMarks = marks.reduce((a, b) => a + b);
-  return totalMarks / marks.length;
-}
+// double calculateAverage(List<int> marks) {
+//   int totalMarks = marks.reduce((a, b) => a + b);
+//   return totalMarks / marks.length;
+// }
 
 String calculateGrade(double average) {
   if (average >= 90) {
