@@ -16,17 +16,20 @@ void main() {
   ];
 
   bool isLoggedIn = false;
+  print(users[1]['email']);
 
   while (isLoggedIn == false) {
     print("Enter email");
-    var email = int.parse(stdin.readLineSync()!);
+    String email = stdin.readLineSync()!;
     print("Enter Password");
     var password = int.parse(stdin.readLineSync()!);
-    if (email == users['email'] && password == users['password']) {
+    if (email == users[1]['email'] && password == users[1]['password']) {
       print("Logged in");
-      isLoggedIn = false;
+      isLoggedIn = true;
     } else {
       print("Login failed");
+      print(users[0]['email']);
+      print(users[0]['password']);
     }
   }
 }

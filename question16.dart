@@ -3,16 +3,14 @@
 //   * *
 //  * * *
 // * * * *
+import 'dart:io';
+
 main() {
-  for (int i = 0; i < 4; i++) {
-    //for row
-    var stars = '';
-    for (int j = (4 - i); j > 1; j--) {
-      stars += ' ';
+  for (var i = 1; i < 5; i++) {
+    for (var j = 1; j <= i; j++) {
+      stdout.write("*");
     }
-    for (int j = 0; j <= i; j++) {
-      stars += '* ';
-    }
-    print(stars);
+
+    print(" ");
   }
 }
